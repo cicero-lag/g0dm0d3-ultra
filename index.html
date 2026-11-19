@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090909"><meta name="description" content="G0DM0D3 ULTRA — painel móvel">
+<link rel="manifest" href="manifest.webmanifest"><title>G0DM0D3 ULTRA</title>
+<style>
+:root{--red:#ff2438;--bg:#090909;--panel:#151515;--line:#392027;--muted:#aaa}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#4b1019,transparent 45%),var(--bg);color:#f7f7f7;font:15px system-ui;min-height:100vh}
+header{height:66px;display:flex;align-items:center;gap:12px;padding:0 16px;border-bottom:1px solid var(--line);background:#090909dd;position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}
+.logo{font-size:20px;font-weight:950;letter-spacing:1.5px;flex:1}.logo span{color:var(--red);text-shadow:0 0 14px #ff243877}
+.iconbtn{border:1px solid #4a252b;background:#171214;color:white;border-radius:10px;padding:9px 12px;font-size:18px}
+.layout{display:flex;max-width:1000px;margin:auto;min-height:calc(100vh - 66px)}
+aside{width:230px;padding:18px 12px;border-right:1px solid #25181b;background:#0d0b0c}
+.nav{width:100%;text-align:left;padding:13px 12px;border:1px solid transparent;background:transparent;color:#ddd;border-radius:10px;margin:4px 0;font-weight:650}
+.nav.active,.nav:active{background:#291116;border-color:#69202b;color:white}.nav span{color:var(--red);margin-right:8px}
+main{flex:1;min-width:0;padding:22px 17px 40px}.eyebrow{color:#ff7885;letter-spacing:2px;font-size:11px;font-weight:800}
+.hero{border:1px solid #67202b;background:linear-gradient(145deg,#251015,#111);border-radius:18px;padding:22px;text-align:center;box-shadow:0 12px 38px #0009;animation:rise .55s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.orb{width:76px;height:76px;border:2px solid var(--red);border-radius:50%;margin:0 auto 12px;display:grid;place-items:center;color:var(--red);font-size:29px;font-weight:950;box-shadow:0 0 25px #ff243855,inset 0 0 22px #ff243822;animation:pulse 2.8s infinite}
+@keyframes pulse{50%{box-shadow:0 0 36px #ff243899,inset 0 0 25px #ff243844}}
+h1{font-size:23px;margin:5px 0 8px}.muted{color:var(--muted);line-height:1.55;font-size:13px}
+.btn{display:inline-block;text-decoration:none;text-align:center;border:0;border-radius:11px;padding:13px 16px;background:var(--red);color:white;font-weight:850;cursor:pointer}
+.btn.alt{background:#191919;border:1px solid #51232b}.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:17px}
+.panel{background:#141414;border:1px solid #2b2426;border-radius:15px;padding:17px;margin-top:16px}
+.panel h2{font-size:15px;margin:0 0 12px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.tile{background:#171717;border:1px solid #302326;border-radius:12px;padding:14px}.tile b{display:block;margin-bottom:5px}.tile small{color:#aaa;line-height:1.4}
+.view{display:none}.view.active{display:block;animation:rise .3s ease}.chatlog{height:280px;overflow:auto;background:#0d0d0d;border:1px solid #292929;border-radius:12px;padding:12px;margin-bottom:10px}.bubble{padding:10px 12px;border-radius:12px;margin:8px 0;max-width:90%;font-size:13px;line-height:1.45}.bot{background:#241217;border:1px solid #55212b}.user{background:#292929;margin-left:auto}.compose{display:flex;gap:8px}.compose input,.field{min-width:0;flex:1;background:#0b0b0b;color:white;border:1px solid #403035;border-radius:10px;padding:12px;font:inherit}.hint{font-size:11px;color:#888;margin-top:9px}
+label{display:block;color:#bbb;font-size:12px;margin:13px 0 6px}
+footer{text-align:center;color:#777;font-size:11px;padding:20px}
+@media(max-width:650px){.layout{display:block}aside{display:none;position:fixed;z-index:10;top:66px;bottom:0;width:260px;box-shadow:15px 0 40px #000b}.layout.menu-open aside{display:block}main{padding:17px 13px 32px}.cards{grid-template-columns:1fr 1fr}}
+</style></head><body>
+<header><button class="iconbtn" id="menu" aria-label="Abrir menu">☰</button><div class="logo">G0DM0D3 <span>ULTRA</span></div><button class="iconbtn" id="settingsTop" aria-label="Configurações">⚙</button></header>
+<div class="layout" id="layout"><aside>
+<button class="nav active" data-view="home"><span>◆</span> Painel inicial</button>
+<button class="nav" data-view="chat"><span>◉</span> Chat demonstrativo</button>
+<button class="nav" data-view="tools"><span>✦</span> Recursos</button>
+<button class="nav" data-view="settings"><span>⚙</span> Configurações</button>
+</aside><main>
+<section class="view active" id="home"><div class="eyebrow">RED EDITION • MOBILE CONTROL</div><div class="hero"><div class="orb">G</div><h1>Entre no modo ULTRA</h1><p class="muted">Um painel móvel com acesso rápido à plataforma G0DM0D3 e atalhos para seus recursos.</p><div class="actions"><a class="btn" href="https://godmod3.ai/" target="_blank" rel="noopener">ABRIR G0DM0D3.AI</a><button class="btn alt" data-go="chat">ABRIR CHAT DEMO</button></div></div>
+<div class="panel"><h2>Central de recursos</h2><div class="cards"><div class="tile"><b>IA ASSISTENTE</b><small>Acesse os modelos na plataforma oficial.</small></div><div class="tile"><b>VISUAL RED</b><small>Tema escuro com detalhes neon.</small></div><div class="tile"><b>ACESSO RÁPIDO</b><small>Atalho direto ao serviço online.</small></div><div class="tile"><b>MODO MOBILE</b><small>Interface adaptada ao celular.</small></div></div></div></section>
+<section class="view" id="chat"><div class="eyebrow">CHAT • DEMONSTRAÇÃO LOCAL</div><div class="panel"><h2>Assistente G0DM0D3</h2><div class="chatlog" id="chatlog"><div class="bubble bot">Olá! Esta é uma demonstração da interface. Para conversar com uma IA real, abra a plataforma oficial pelo botão abaixo.</div></div><form class="compose" id="chatform"><input id="message" placeholder="Digite uma mensagem..." autocomplete="off"><button class="btn">Enviar</button></form><p class="hint">Este chat é apenas visual: não está conectado a um modelo de IA nem envia suas mensagens.</p><div class="actions"><a class="btn" href="https://godmod3.ai/" target="_blank" rel="noopener">ABRIR IA OFICIAL</a></div></div></section>
+<section class="view" id="tools"><div class="eyebrow">RECURSOS</div><div class="panel"><h2>Atalhos</h2><div class="cards"><div class="tile"><b>Plataforma oficial</b><small>Abra o serviço G0DM0D3.</small><p><a class="btn" href="https://godmod3.ai/" target="_blank" rel="noopener">Abrir</a></p></div><div class="tile"><b>Instalação</b><small>Use o menu do navegador para adicionar à tela inicial quando hospedado em HTTPS.</small></div></div></div></section>
+<section class="view" id="settings"><div class="eyebrow">PREFERÊNCIAS</div><div class="panel"><h2>Configurações</h2><label for="appname">Nome exibido</label><input class="field" id="appname" value="G0DM0D3 ULTRA"><label for="accent">Cor de destaque</label><select class="field" id="accent"><option value="#ff2438">Vermelho neon</option><option value="#ff5b24">Laranja</option><option value="#c51d35">Vermelho escuro</option></select><p><button class="btn" id="save">Salvar preferências</button></p><p class="hint">As preferências ficam salvas neste navegador. O app depende de conexão para abrir a plataforma oficial.</p></div></section>
+<footer>G0DM0D3 ULTRA • Interface independente, não oficial.</footer>
+</main></div>
+<script>
+const layout=document.getElementById('layout');function show(v){document.querySelectorAll('.view').forEach(x=>x.classList.toggle('active',x.id===v));document.querySelectorAll('.nav').forEach(x=>x.classList.toggle('active',x.dataset.view===v));layout.classList.remove('menu-open')}
+document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>show(b.dataset.view));document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>show(b.dataset.go));document.getElementById('menu').onclick=()=>layout.classList.toggle('menu-open');document.getElementById('settingsTop').onclick=()=>show('settings');
+document.getElementById('chatform').onsubmit=e=>{e.preventDefault();let i=document.getElementById('message'),v=i.value.trim();if(!v)return;let d=document.createElement('div');d.className='bubble user';d.textContent=v;document.getElementById('chatlog').appendChild(d);let a=document.createElement('div');a.className='bubble bot';a.textContent='Esta é uma demonstração local, sem conexão com IA. Toque em “ABRIR IA OFICIAL” para enviar sua pergunta à plataforma.';document.getElementById('chatlog').appendChild(a);i.value; i.value='';document.getElementById('chatlog').scrollTop=99999};
+document.getElementById('save').onclick=()=>{let n=document.getElementById('appname').value.trim()||'G0DM0D3 ULTRA';document.querySelector('.logo').innerHTML=n.replace('ULTRA','<span>ULTRA</span>');document.documentElement.style.setProperty('--red',document.getElementById('accent').value);try{localStorage.setItem('g3name',n);localStorage.setItem('g3accent',document.getElementById('accent').value)}catch(e){}};
+try{let n=localStorage.getItem('g3name'),c=localStorage.getItem('g3accent');if(n){document.getElementById('appname').value=n;document.querySelector('.logo').innerHTML=n.replace('ULTRA','<span>ULTRA</span>')}if(c){document.getElementById('accent').value=c;document.documentElement.style.setProperty('--red',c)}}catch(e){}
+if('serviceWorker'in navigator&&location.protocol.startsWith('http'))addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+</script></body></html>
